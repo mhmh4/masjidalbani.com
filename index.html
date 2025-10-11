@@ -57,89 +57,85 @@
     </header>
 
     <main class="relative bg-white">
-      <div class="">
-        <div class="px-10 py-8 mx-auto max-w-6xl">
-          <h1 class="text-[27px] font-extrabold font-[Raleway]">
-            Prayer Times
-          </h1>
+      <div class="px-10 py-8 mx-auto max-w-6xl">
+        <h1 class="text-[27px] font-extrabold font-[Raleway] mb-4">
+          Prayer Times
+        </h1>
 
-          <div class="mt-4 text-lg">
-            <div class="flex items-center">
-              <div class="flex-grow">
-                <span id="current-date"></span>
-                <span class="text-slate-500">(13 Rabi Al-Thani 1447)</span>
-              </div>
-              <div>Jumu'ah Khutbah begins at 1:15 PM</div>
+        <div class="text-lg">
+          <div class="flex items-center">
+            <div class="flex-grow">
+              <span id="current-date"></span>
+              <span class="text-slate-500">(13 Rabi Al-Thani 1447)</span>
+
+              <script>
+                function getCurrentDateInEST() {
+                  return new Date().toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    timeZone: "America/New_York",
+                  });
+                }
+
+                document.getElementById("current-date").innerHTML =
+                  getCurrentDateInEST();
+              </script>
             </div>
-
-            <script>
-              function getCurrentDateInEST() {
-                return new Date().toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                  timeZone: "America/New_York",
-                });
-              }
-
-              document.getElementById("current-date").innerHTML =
-                getCurrentDateInEST();
-            </script>
-          </div>
-
-          <div class="rounded-xl border-slate- py-2 mt-4">
-            <table class="w-full text-lg bg-white">
-              <thead>
-                <tr>
-                  <th class="w-48"></th>
-                  <th class="w-48 border-b pb-2">Fajr</th>
-                  <th class="w-48 border-b pb-2">Dhuhr</th>
-                  <th class="w-48 border-b pb-2">'Asr</th>
-                  <th class="w-48 border-b pb-2">Maghrib</th>
-                  <th class="w-48 border-b pb-2">'Isha</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <th class="">Adhan</th>
-
-                  <th class="font-normal py-2">5:27 AM</th>
-                  <th class="font-normal py-2">12:49 PM</th>
-                  <th class="font-normal py-2">4:16 PM</th>
-                  <th class="font-normal py-2">6:54 PM</th>
-                  <th class="font-normal py-2">8:10 PM</th>
-                </tr>
-                <tr>
-                  <th class="">Iqamah</th>
-
-                  <th class="font-normal py-2 border-t border-slate-300">
-                    5:45 AM
-                  </th>
-                  <th class="font-normal py-2 border-t border-slate-300">
-                    1:30 PM
-                  </th>
-                  <th class="font-normal py-2 border-t border-slate-300">
-                    4:45 PM
-                  </th>
-                  <th class="font-normal py-2 border-t border-slate-300">
-                    7:05 PM
-                  </th>
-                  <th class="font-normal py-2 border-t border-slate-300">
-                    8:30 PM
-                  </th>
-                </tr>
-              </tbody>
-            </table>
+            <div>Jumu'ah Khutbah begins at 1:15 PM</div>
           </div>
         </div>
+
+        <table class="text-lg mt-8">
+          <thead>
+            <tr>
+              <th class="w-48"></th>
+              <th class="w-48 border-b pb-2">Fajr</th>
+              <th class="w-48 border-b pb-2">Dhuhr</th>
+              <th class="w-48 border-b pb-2">'Asr</th>
+              <th class="w-48 border-b pb-2">Maghrib</th>
+              <th class="w-48 border-b pb-2">'Isha</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th class="">Adhan</th>
+
+              <th class="font-normal py-2">5:27 AM</th>
+              <th class="font-normal py-2">12:49 PM</th>
+              <th class="font-normal py-2">4:16 PM</th>
+              <th class="font-normal py-2">6:54 PM</th>
+              <th class="font-normal py-2">8:10 PM</th>
+            </tr>
+            <tr>
+              <th class="">Iqamah</th>
+
+              <th class="font-normal py-2 border-t border-slate-300">
+                5:45 AM
+              </th>
+              <th class="font-normal py-2 border-t border-slate-300">
+                1:30 PM
+              </th>
+              <th class="font-normal py-2 border-t border-slate-300">
+                4:45 PM
+              </th>
+              <th class="font-normal py-2 border-t border-slate-300">
+                7:05 PM
+              </th>
+              <th class="font-normal py-2 border-t border-slate-300">
+                8:30 PM
+              </th>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="px-10 py-8 mx-auto max-w-6xl">
         <h1 class="text-[27px] font-extrabold font-[Raleway] mb-2">About</h1>
 
         <div class="flex">
-          <div class="flex-grow text-gray-700 leading-7">
+          <div class="flex-grow leading-7">
             <p class="mt-2">
               Masjid Al-Imam Al-Albani is a mosque based in Brooklyn, New York
               City that aims to follow the sunnah according to the understanding
@@ -163,40 +159,40 @@
         </div>
       </div>
 
-      <div class="border-slate-300">
-        <div class="px-10 py-8 mx-auto max-w-6xl">
-          <h1 class="text-[27px] font-extrabold font-[Raleway]">Lessons</h1>
+      <div class="px-10 py-8 mx-auto max-w-6xl">
+        <h1 class="text-[27px] font-extrabold font-[Raleway]">Lessons</h1>
 
-          <div class="md:flex">
-            <div class="flex-1 text-gray-700 leading-7">
-              <p class="mt-3 pr-4">
-                Daily lessons are held at the masjid between Maghrib and 'Isha.
-                English translators are always available and, at times, there
-                are translators for other languages as well.
-                <br />
-                <br />
-                Shaykh Abu Dujanah is currently teaching the following books:
-              </p>
-              <ul class="list-disc pl-8 mt-1">
-                <li class="mt-">Kitab Al-Tawheed</li>
-                <li class="mt-">Buloogh Al-Maraam</li>
-                <li class="mt-">Jami' Al-Saheeh</li>
-              </ul>
-              <p class="mt-3">
-                PDFs for certain books can be found
-                <a href="#" class="underline">here</a>.
-              </p>
-            </div>
-            <div class="flex-1">
-              <iframe
-                class="rounded-lg h-full"
-                src="https://masjidalbaninyc.mixlr.com/embed"
-                frameborder="0"
-                scrolling="no"
-                height="200px"
-                width="100%"
-              ></iframe>
-            </div>
+        <div class="md:flex">
+          <div class="flex-1 leading-7">
+            <p class="mt-3">
+              Daily lessons are held at the masjid between Maghrib and 'Isha.
+              English translators are always available and, at times, there are
+              translators for other languages as well.
+            </p>
+            <p class="mt-3">
+              Shaykh Abu Dujanah is currently teaching the following books:
+            </p>
+            <ul class="list-disc pl-8 mt-3">
+              <li class="mt-">Kitab Al-Tawheed</li>
+              <li class="mt-">Buloogh Al-Maraam</li>
+              <li class="mt-">Jami' Al-Saheeh</li>
+            </ul>
+
+            <p class="mt-3">
+              PDFs for certain books can be found
+              <a href="#" class="underline">here</a>.
+            </p>
+          </div>
+
+          <div class="flex-1">
+            <iframe
+              class="rounded-lg h-full"
+              src="https://masjidalbaninyc.mixlr.com/embed"
+              frameborder="0"
+              scrolling="no"
+              height="200px"
+              width="100%"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -226,7 +222,7 @@
         <style></style>
         <div class="px-10 py-8 mx-auto max-w-6xl pb-20">
           <h1
-            class="text-[27px] font-bold w-fit rounded-3xl mb-6 font-[Raleway]"
+            class="text-[27px] font-bold w-fit rounded-3xl mb-2 font-[Raleway]"
           >
             Socials
           </h1>
