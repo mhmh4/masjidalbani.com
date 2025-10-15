@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="overscroll-none">
   <head>
     <meta charset="utf-8" />
@@ -17,29 +17,29 @@
   </head>
 
   <body>
-    <header class="bg-[#0e3439] text-white sticky sticky top-0 z-50">
+    <header class="sticky top-0 z-50 bg-[#0e3439] text-white">
       <div
-        class="flex flex-col sm:px-10 px-5 py-5 max-w-7xl mx-auto sm:flex-row"
+        class="mx-auto flex max-w-7xl flex-col px-5 py-5 sm:flex-row sm:px-10"
       >
         <div class="flex flex-grow">
           <img
-            class="text-center border-r pr-4 border-[#b1a167] sm:w-[130px] w-[70px] h-full"
+            class="h-full w-[70px] border-r border-[#b1a167] pr-4 text-center sm:w-[130px]"
             src="./static/masjid-logo.png"
             alt="Masjid Al-Imam Al-Albani logo"
           />
-          <h1 class="my-auto pl-5 sm:text-[21px] text-lg font-[Roboto_Serif]">
+          <h1 class="my-auto pl-5 font-[Roboto_Serif] text-lg sm:text-[21px]">
             Masjid Al-Imam Al-Albani
           </h1>
         </div>
 
-        <div class="flex sm:text-lg text-md items-center">
+        <div class="text-md flex items-center sm:text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-5 mr-1 text-red-400"
+            class="mr-1 size-5 text-red-400"
           >
             <path
               stroke-linecap="round"
@@ -58,13 +58,13 @@
     </header>
 
     <main class="relative bg-white">
-      <div class="sm:px-10 px-5 py-8 mx-auto max-w-6xl">
-        <h1 class="text-[27px] font-extrabold font-[Raleway] mb-4">
+      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">
           Prayer Times
         </h1>
 
         <div class="text-lg">
-          <div class="flex sm:flex-row flex-col items-center">
+          <div class="flex flex-col items-center sm:flex-row">
             <div class="flex-grow">
               <span id="current-date"></span>
               <span class="text-slate-500">(13 Rabi Al-Thani 1447)</span>
@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <table class="text-lg mt-8 md:text-lg text-sm">
+        <table class="mt-8 text-lg text-sm md:text-lg">
           <thead>
             <tr>
               <th class="w-48"></th>
@@ -103,28 +103,28 @@
             <tr>
               <th class="">Adhan</th>
 
-              <th class="font-normal py-2">5:27 AM</th>
-              <th class="font-normal py-2">12:49 PM</th>
-              <th class="font-normal py-2">4:16 PM</th>
-              <th class="font-normal py-2">6:54 PM</th>
-              <th class="font-normal py-2">8:10 PM</th>
+              <th class="py-2 font-normal">5:27 AM</th>
+              <th class="py-2 font-normal">12:49 PM</th>
+              <th class="py-2 font-normal">4:16 PM</th>
+              <th class="py-2 font-normal">6:54 PM</th>
+              <th class="py-2 font-normal">8:10 PM</th>
             </tr>
             <tr>
               <th class="">Iqamah</th>
 
-              <th class="font-normal py-2 border-t border-slate-300">
+              <th class="border-t border-slate-300 py-2 font-normal">
                 5:45 AM
               </th>
-              <th class="font-normal py-2 border-t border-slate-300">
+              <th class="border-t border-slate-300 py-2 font-normal">
                 1:30 PM
               </th>
-              <th class="font-normal py-2 border-t border-slate-300">
+              <th class="border-t border-slate-300 py-2 font-normal">
                 4:45 PM
               </th>
-              <th class="font-normal py-2 border-t border-slate-300">
+              <th class="border-t border-slate-300 py-2 font-normal">
                 7:05 PM
               </th>
-              <th class="font-normal py-2 border-t border-slate-300">
+              <th class="border-t border-slate-300 py-2 font-normal">
                 8:30 PM
               </th>
             </tr>
@@ -132,8 +132,8 @@
         </table>
       </div>
 
-      <div class="px-10 py-8 mx-auto max-w-6xl">
-        <h1 class="text-[27px] font-extrabold font-[Raleway] mb-4">About</h1>
+      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">About</h1>
 
         <div class="flex">
           <div class="flex-grow leading-7">
@@ -142,34 +142,33 @@
               City that aims to follow the sunnah according to the understanding
               of the pious predecessors.
             </p>
-            <p class="block mt-6">
+            <p class="mt-6 block">
               The imam of the masjid is Shaykh Abu Dujanah, who was an early
               student of Dammaj in Yemen and had studied with Imam Muqbil (May
               Allah have mercy on him) for 7 years. The shaykh currently holds
               lessons between Maghrib and Isha everyday.
             </p>
-            <p class="block mt-6">
+            <p class="mt-6 block">
               Please note: the masjid does not have enough space to accomodate
               for sisters.
             </p>
           </div>
           <div class=""></div>
         </div>
-        <div class="flex gap-6 mt-4">
+        <div class="mt-4 flex gap-6">
           <div class="flex"></div>
         </div>
       </div>
 
-      <div class="px-10 py-8 mx-auto max-w-6xl">
-        <h1 class="text-[27px] font-extrabold font-[Raleway] mb-4">Lessons</h1>
+      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Lessons</h1>
 
-        <div class="md:flex gap-x-8">
+        <div class="gap-x-8 md:flex">
           <div class="flex-1 leading-7">
-            <p>
+            <p class="">
               Daily lessons are held at the masjid between Maghrib and 'Isha.
-              English translators are always available and, at times, there are
-              translators for other languages as well.
             </p>
+
             <p class="mt-3">
               Shaykh Abu Dujanah is currently teaching the following books:
             </p>
@@ -178,13 +177,16 @@
               <li class="mt-">Buloogh Al-Maraam</li>
               <li class="mt-">Jami' Al-Saheeh</li>
             </ul>
-
+            <p class="mt-3">
+              English translators are always available and, at times, there are
+              translators for other languages as well.
+            </p>
             <p class="mt-3">
               The PDFs that are used for some previous and current lessons can
               be found
               <a
                 href="https://drive.google.com/drive/folders/1d_yLweYNbALET2my7ZlRi5wHus4s7Ueq?usp=drive_link"
-                class="underline text-cyan-600"
+                class="text-cyan-600 underline"
                 target="_blank"
                 rel="noopener noreferrer"
                 >here</a
@@ -194,7 +196,7 @@
 
           <div class="flex-1">
             <iframe
-              class="rounded-lg h-full"
+              class="h-full rounded-lg"
               src="https://masjidalbaninyc.mixlr.com/embed"
               frameborder="0"
               scrolling="no"
@@ -205,89 +207,83 @@
         </div>
       </div>
 
-      <div class="border-slate-300">
-        <div class="px-10 py-8 mx-auto max-w-6xl">
-          <h1 class="text-[27px] font-extrabold font-[Raleway] mb-4">
-            Contact
-          </h1>
+      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Contact</h1>
 
-          <div class="mx-auto">
-            <h2 class="leading-7">
-              For any questions, please email us at
-              <a
-                class="underline text-cyan-600"
-                href="mailto:imamalalbanimasjid@gmail.com"
-                >imamalalbanimasjid@gmail.com</a
-              >.
-            </h2>
-          </div>
-        </div>
+        <p class="leading-7">
+          For any questions, please email us at
+          <a
+            class="text-cyan-600 underline"
+            href="mailto:imamalalbanimasjid@gmail.com"
+            >imamalalbanimasjid@gmail.com</a
+          >.
+        </p>
       </div>
 
-      <div class="px-10 py-8 mx-auto max-w-6xl pb-20">
-        <h1 class="text-[27px] font-extrabold font-[Raleway] mb-4">Socials</h1>
+      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Socials</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col gap-x-4 md:flex-row">
           <a
-            class="rounded-4xl border-2 border-red-500 pl-4 pr-6 mr-8 bg-white flex items-center mx-auto w-full hover:bg-red-50 hover:cursor-pointer"
+            class="flex w-48 items-center rounded border-2 border-red-500 bg-white pr-6 pl-4 hover:cursor-pointer hover:bg-red-50"
             href="https://www.youtube.com/@ShaykhAbuDujanah"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              class="w-auto h-14"
+              class="h-10 w-auto sm:h-14"
               src="./static/youtube-logo.png"
               alt="YouTube logo"
             />
-            <span class="ml-2 text-lg flex-grow">YouTube Channel</span>
+            <span class="ml-2 flex-grow text-lg">YouTube</span>
           </a>
 
           <a
-            class="rounded-4xl border-2 border-red-500 w-full px-6 flex items-center mx-auto bg-white py-2 hover:bg-red-50 hover:cursor-pointer"
+            class="flex w-48 items-center rounded border-2 border-red-500 bg-white px-6 py-2 hover:cursor-pointer hover:bg-red-50"
             href="https://masjidalbaninyc.mixlr.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              class="h-12 w-auto mr-4"
+              class="mr-4 h-8 w-auto sm:h-12"
               src="./static/mixlr-logo.svg"
               alt="Mixlr logo"
             />
-            <span class="text-lg flex-grow"> Mixlr </span>
+            <span class="flex-grow text-lg">Mixlr</span>
           </a>
 
           <a
-            class="rounded-4xl border-2 border-blue-500 w-full px-6 flex items-center mx-auto bg-white py-2 hover:bg-blue-50 hover:cursor-pointer"
+            class="flex w-48 items-center rounded border-2 border-blue-500 bg-white px-6 py-2 hover:cursor-pointer hover:bg-blue-50"
             href="https://t.me/masjidalalbani"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              class="w-auto h-12 mr-4"
+              class="mr-4 h-8 w-auto sm:h-12"
               src="./static/telegram-logo.png"
               alt="Telegram logo"
             />
-            <span class="text-lg flex-grow">Telegram Group</span>
+            <span class="flex-grow text-lg">Telegram</span>
           </a>
 
           <a
-            class="rounded-4xl border-2 py-2 border-green-500 px-6 bg-white flex items-center mx-auto w-full hover:bg-green-50 hover:cursor-pointer"
+            class="flex w-48 items-center rounded border-2 border-green-500 bg-white px-6 py-2 hover:cursor-pointer hover:bg-green-50"
             href="https://chat.whatsapp.com/DMpQ09pkGeF0DaMthLGZGG"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              class="w-auto h-12 mr-4"
+              class="mr-4 h-8 w-auto sm:h-12"
               src="./static/whatsapp-logo.png"
               alt="WhatsApp logo"
             />
-            <span class="text-lg flex-grow">WhatsApp Group </span>
+            <span class="flex-grow text-lg">WhatsApp</span>
           </a>
         </div>
       </div>
     </main>
 
-    <footer class="bg-slate-100 py-7 text-center border-t border-slate-300">
+    <footer class="border-t border-slate-300 bg-slate-100 py-7 text-center">
       <p class="mt-4 mb-5 text-slate-800">© Masjid Al-Imam Al-Albani 2025</p>
     </footer>
   </body>
