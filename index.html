@@ -14,6 +14,10 @@
     </style>
 
     <script src="tailwind.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script>
+      console.log(moment("2025/10/15", "iYYYY/iM/iD").format("M/D/YYYY"));
+    </script>
   </head>
 
   <body>
@@ -66,8 +70,8 @@
         <div class="text-lg">
           <div class="flex flex-col items-center sm:flex-row">
             <div class="flex-grow">
-              <span id="current-date"></span>
-              <span class="text-slate-500">(13 Rabi Al-Thani 1447)</span>
+              <span id="current-date" class="font-"></span>
+              <span class="text-slate-00">(13 Rabi Al-Thani 1447)</span>
 
               <script>
                 function getCurrentDateInEST() {
@@ -87,49 +91,51 @@
           </div>
         </div>
 
-        <table class="mt-8 text-lg text-sm md:text-lg">
-          <thead>
-            <tr>
-              <th class="w-48"></th>
-              <th class="w-48 border-b pb-2">Fajr</th>
-              <th class="w-48 border-b pb-2">Dhuhr</th>
-              <th class="w-48 border-b pb-2">'Asr</th>
-              <th class="w-48 border-b pb-2">Maghrib</th>
-              <th class="w-48 border-b pb-2">'Isha</th>
-            </tr>
-          </thead>
+        <div class="mt-8 rounded-lg border py-1">
+          <table class="text-lg text-sm md:text-lg">
+            <thead>
+              <tr>
+                <th class="w-48 border-b pb-2"></th>
+                <th class="w-48 border-b pb-2">Fajr</th>
+                <th class="w-48 border-b pb-2">Dhuhr</th>
+                <th class="w-48 border-b pb-2">'Asr</th>
+                <th class="w-48 border-b pb-2">Maghrib</th>
+                <th class="w-48 border-b pb-2">'Isha</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <th class="">Adhan</th>
+            <tbody>
+              <tr>
+                <th class="">Adhan</th>
 
-              <th class="py-2 font-normal">5:27 AM</th>
-              <th class="py-2 font-normal">12:49 PM</th>
-              <th class="py-2 font-normal">4:16 PM</th>
-              <th class="py-2 font-normal">6:54 PM</th>
-              <th class="py-2 font-normal">8:10 PM</th>
-            </tr>
-            <tr>
-              <th class="">Iqamah</th>
+                <th class="py-2 font-normal">5:27 AM</th>
+                <th class="py-2 font-normal">12:49 PM</th>
+                <th class="py-2 font-normal">4:16 PM</th>
+                <th class="py-2 font-normal">6:54 PM</th>
+                <th class="py-2 font-normal">8:10 PM</th>
+              </tr>
+              <tr>
+                <th class="border-t border-slate-300">Iqamah</th>
 
-              <th class="border-t border-slate-300 py-2 font-normal">
-                5:45 AM
-              </th>
-              <th class="border-t border-slate-300 py-2 font-normal">
-                1:30 PM
-              </th>
-              <th class="border-t border-slate-300 py-2 font-normal">
-                4:45 PM
-              </th>
-              <th class="border-t border-slate-300 py-2 font-normal">
-                7:05 PM
-              </th>
-              <th class="border-t border-slate-300 py-2 font-normal">
-                8:30 PM
-              </th>
-            </tr>
-          </tbody>
-        </table>
+                <th class="border-t border-slate-300 py-2 font-normal">
+                  5:45 AM
+                </th>
+                <th class="border-t border-slate-300 py-2 font-normal">
+                  1:30 PM
+                </th>
+                <th class="border-t border-slate-300 py-2 font-normal">
+                  4:45 PM
+                </th>
+                <th class="border-t border-slate-300 py-2 font-normal">
+                  7:05 PM
+                </th>
+                <th class="border-t border-slate-300 py-2 font-normal">
+                  8:30 PM
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
@@ -137,7 +143,7 @@
 
         <div class="flex">
           <div class="flex-grow leading-7">
-            <p>
+            <!-- <p>
               Masjid Al-Imam Al-Albani is a mosque based in Brooklyn, New York
               City that aims to follow the sunnah according to the understanding
               of the pious predecessors.
@@ -151,6 +157,27 @@
             <p class="mt-6 block">
               Please note: the masjid does not have enough space to accomodate
               for sisters.
+            </p> -->
+
+            <p>
+              Masjid Al-Imam Al-Albani is a mosque located in Brooklyn, New York
+              City, dedicated to teaching and practicing Islam upon the Sunnah
+              according to the understanding of the pious predecessors (<i
+                >As-Salaf As-Sālih</i
+              >).
+            </p>
+
+            <p class="mt-6 block">
+              The imam of the masjid is Shaykh Abu Dujanah, one of the early
+              students of Dammaj in Yemen. He studied under Imam Muqbil ibn Hadi
+              al-Wadi' (May Allah have Mercy on him) for seven years. The shaykh
+              delivers daily lessons, focusing on beneficial knowledge and
+              adherence to the authentic Sunnah.
+            </p>
+
+            <p class="mt-6 block">
+              Please note: The masjid currently does not have sufficient space
+              to accommodate sisters.
             </p>
           </div>
           <div class=""></div>
@@ -220,7 +247,7 @@
         </p>
       </div>
 
-      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+      <div class="mx-auto max-w-6xl px-5 pt-8 pb-16 sm:px-10">
         <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Socials</h1>
 
         <div class="flex flex-col gap-x-4 gap-y-4 md:flex-row md:gap-y-0">
