@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="overscroll-none">
+<html class="overscroll-none" lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +11,14 @@
     <title>Masjid Al-Imam Al-Albani</title>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
       :root {
         background: #f1f5f9;
       }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Intentionally using an older version of Tailwind. -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
@@ -31,7 +32,7 @@
             src="./static/masjid-logo.png"
             alt="Masjid Al-Imam Al-Albani logo"
           />
-          <h1 class="my-auto pl-5 font-[Roboto_Serif] text-lg sm:text-[21px]">
+          <h1 class="my-auto pl-5 font-['Roboto_Serif'] text-lg sm:text-[21px]">
             Masjid Al-Imam Al-Albani
           </h1>
         </div>
@@ -56,9 +57,7 @@
 
     <main class="relative bg-white">
       <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
-        <h1 class="mb-2 font-[Raleway] text-[27px] font-extrabold">
-          Prayer Times
-        </h1>
+        <h1 class="mb-2 text-[27px] font-bold tracking-tight">Prayer Times</h1>
 
         <div class="text-center text-lg">
           <span id="gregorian-date"></span>
@@ -71,12 +70,12 @@
           <table class="text-sm md:text-lg">
             <thead>
               <tr>
-                <th class="w-48 border-b pb-2"></th>
-                <th class="w-48 border-b pb-2">Fajr</th>
-                <th class="w-48 border-b pb-2">Dhuhr</th>
-                <th class="w-48 border-b pb-2">Asr</th>
-                <th class="w-48 border-b pb-2">Maghrib</th>
-                <th class="w-48 border-b pb-2">Isha</th>
+                <th class="w-48 border-b border-black pb-2"></th>
+                <th class="w-48 border-b border-black pb-2">Fajr</th>
+                <th class="w-48 border-b border-black pb-2">Dhuhr</th>
+                <th class="w-48 border-b border-black pb-2">Asr</th>
+                <th class="w-48 border-b border-black pb-2">Maghrib</th>
+                <th class="w-48 border-b border-black pb-2">Isha</th>
               </tr>
             </thead>
 
@@ -115,7 +114,7 @@
       </div>
 
       <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
-        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">About</h1>
+        <h1 class="mb-4 text-[27px] font-bold tracking-tight">About</h1>
 
         <div class="flex-grow leading-7">
           <p>
@@ -141,7 +140,7 @@
       </div>
 
       <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
-        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Lessons</h1>
+        <h1 class="mb-4 text-[27px] font-bold tracking-tight">Lessons</h1>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
@@ -211,7 +210,7 @@
       </div>
 
       <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
-        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Contact</h1>
+        <h1 class="mb-4 text-[27px] font-bold tracking-tight">Contact</h1>
 
         <p class="leading-7">
           For any inquiries, please reach out to us at
@@ -223,8 +222,8 @@
         </p>
       </div>
 
-      <div class="mx-auto max-w-6xl px-5 pt-8 pb-18 sm:px-10">
-        <h1 class="mb-4 font-[Raleway] text-[27px] font-extrabold">Socials</h1>
+      <div class="mx-auto max-w-6xl px-5 pt-8 pb-20 sm:px-10">
+        <h1 class="mb-4 text-[27px] font-bold tracking-tight">Socials</h1>
 
         <div class="flex flex-wrap gap-4">
           <a
