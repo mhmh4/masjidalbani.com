@@ -29,6 +29,7 @@
         <div class="flex flex-grow justify-center sm:justify-normal">
           <img
             class="h-full w-[70px] border-r border-[#b1a167] pr-4 text-center sm:w-[130px]"
+            class="h-full w-[70px] border-r border-[#b1a167] pr-4 text-center sm:w-[100px] lg:w-[130px]"
             src="./static/masjid-logo.png"
             alt="Masjid Al-Imam Al-Albani logo"
           />
@@ -57,13 +58,16 @@
 
     <main class="relative bg-white">
       <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+      <section class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
         <h1 class="mb-2 text-[27px] font-bold tracking-tight">Prayer Times</h1>
 
         <div class="text-center text-lg">
           <span id="gregorian-date"></span>
           <span id="hijri-date"></span>
+        </div>
 
-          <div class="mt-1">Jumu'ah Khutbah begins at 1:15 PM</div>
+        <div class="mt-1 text-center text-lg">
+          Jumu'ah Khutbah begins at 1:15 PM
         </div>
 
         <div class="mt-5 rounded-2xl border border-slate-500 py-2 shadow-md">
@@ -83,27 +87,45 @@
               <tr>
                 <th>Adhan</th>
 
+                <!-- Fajr adhan time -->
                 <th class="py-2 font-normal">5:27 AM</th>
+
+                <!-- Dhuhr adhan time -->
                 <th class="py-2 font-normal">12:49 PM</th>
+
+                <!-- Asr adhan time -->
                 <th class="py-2 font-normal">4:16 PM</th>
+
+                <!-- Maghrib adhan time -->
                 <th class="py-2 font-normal">6:54 PM</th>
+
+                <!-- Isha adhan time -->
                 <th class="py-2 font-normal">8:10 PM</th>
               </tr>
               <tr>
                 <th class="border-t border-slate-300">Iqamah</th>
 
+                <!-- Fajr iqamah time -->
                 <th class="border-t border-slate-300 py-2 font-normal">
                   5:45 AM
                 </th>
+
+                <!-- Dhuhr iqamah time -->
                 <th class="border-t border-slate-300 py-2 font-normal">
                   1:30 PM
                 </th>
+
+                <!-- Asr iqamah time -->
                 <th class="border-t border-slate-300 py-2 font-normal">
                   4:45 PM
                 </th>
+
+                <!-- Maghrib iqamah time -->
                 <th class="border-t border-slate-300 py-2 font-normal">
                   7:05 PM
                 </th>
+
+                <!-- Isha iqamah time -->
                 <th class="border-t border-slate-300 py-2 font-normal">
                   8:30 PM
                 </th>
@@ -111,9 +133,9 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </section>
 
-      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+      <section class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
         <h1 class="mb-4 text-[27px] font-bold tracking-tight">About</h1>
 
         <div class="flex-grow leading-7">
@@ -137,20 +159,20 @@
             accommodate sisters.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+      <section class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
         <h1 class="mb-4 text-[27px] font-bold tracking-tight">Lessons</h1>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
             <span class="font-bold">When are they?</span>
-            <p>Between Maghrib and 'Isha daily.</p>
+            <p class="leading-7">Between Maghrib and 'Isha daily.</p>
           </div>
 
           <div>
-            <p class="font-bold">What's being taught?</p>
-            <p>
+            <span class="font-bold">What's being taught?</span>
+            <p class="leading-7">
               Currently: Kitab Al-Tawheed, Buloogh Al-Maraam, and Jami'
               Al-Saheeh.
             </p>
@@ -158,7 +180,7 @@
 
           <div>
             <span class="font-bold">Are there translators?</span>
-            <p>
+            <p class="leading-7">
               English translators are always available while translators for
               other languages are sometimes available.
             </p>
@@ -166,14 +188,14 @@
 
           <div>
             <span class="font-bold">Is there anything I should bring?</span>
-            <p>
+            <p class="leading-7">
               Ideally, one should bring a notebook and something to write with.
             </p>
           </div>
 
           <div>
             <span class="font-bold">Are they broadcasted/recorded?</span>
-            <p>
+            <p class="leading-7">
               Yes, live lessons can be streamed on our
               <a
                 href="https://masjidalbaninyc.mixlr.com/"
@@ -196,7 +218,7 @@
             <span class="font-bold">
               Are there PDFs available for the books?
             </span>
-            <p>
+            <p class="leading-7">
               <a
                 href="https://drive.google.com/drive/folders/1d_yLweYNbALET2my7ZlRi5wHus4s7Ueq?usp=drive_link"
                 class="text-[#1a73e8] underline"
@@ -207,9 +229,9 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
+      <section class="mx-auto max-w-6xl px-5 py-8 sm:px-10">
         <h1 class="mb-4 text-[27px] font-bold tracking-tight">Contact</h1>
 
         <p class="leading-7">
@@ -220,9 +242,9 @@
             >imamalalbanimasjid@gmail.com</a
           >.
         </p>
-      </div>
+      </section>
 
-      <div class="mx-auto max-w-6xl px-5 pt-8 pb-20 sm:px-10">
+      <section class="mx-auto max-w-6xl px-5 pt-8 pb-20 sm:px-10">
         <h1 class="mb-4 text-[27px] font-bold tracking-tight">Socials</h1>
 
         <div class="flex flex-wrap gap-4">
@@ -282,11 +304,13 @@
             <span class="flex-grow text-lg">WhatsApp</span>
           </a>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="border-t border-slate-300 bg-slate-100 py-7 text-center">
-      <p class="mt-4 mb-5 text-slate-800">© Masjid Al-Imam Al-Albani 2025</p>
+      <span class="mt-4 mb-5 text-slate-800">
+        © Masjid Al-Imam Al-Albani 2025
+      </span>
     </footer>
   </body>
 
