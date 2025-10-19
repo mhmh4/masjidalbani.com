@@ -24,25 +24,25 @@
   <body>
     <header class="sticky top-0 z-50 bg-[#0e3439] text-white">
       <div
-        class="mx-auto flex max-w-7xl flex-col px-5 py-4 sm:flex-row sm:px-10"
+        class="mx-auto flex max-w-7xl flex-col px-5 py-4 md:flex-row md:px-10"
       >
-        <div class="flex flex-grow justify-center sm:justify-normal">
+        <div class="flex flex-grow justify-center md:justify-normal">
           <img
-            class="h-full w-[85px] border-r border-[#b1a167] pr-4 text-center sm:w-[100px] lg:w-[130px]"
+            class="h-full w-[85px] border-r border-[#b1a167] pr-4 text-center md:w-[100px] lg:w-[130px]"
             src="./static/masjid-logo.png"
             alt="Masjid Al-Imam Al-Albani logo"
           />
-          <h1 class="my-auto pl-5 font-['Roboto_Serif'] text-lg sm:text-[21px]">
+          <h1 class="my-auto pl-5 font-['Roboto_Serif'] text-lg md:text-[21px]">
             Masjid Al-Imam Al-Albani
           </h1>
         </div>
 
-        <div class="mx-auto mt-3 flex items-center text-base sm:m-0 sm:text-lg">
+        <div class="mx-auto mt-3 flex items-center text-base md:m-0 md:text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            class="mr-1 size-4 text-[#ea4335] sm:size-5"
+            class="mr-1 size-4 text-[#ea4335] md:size-5"
           >
             <path
               fill-rule="evenodd"
@@ -57,7 +57,7 @@
 
     <main class="relative bg-white py-12">
       <section class="mx-auto max-w-6xl px-5 pb-4 sm:px-10 sm:pb-8">
-        <h1 class="mb-2 text-[27px] font-bold tracking-tight">Prayer Times</h1>
+        <h2 class="mb-2 text-[27px] font-bold tracking-tight">Prayer Times</h2>
 
         <div class="text-center text-xl">
           <span id="gregorian-date"></span>
@@ -69,11 +69,11 @@
             <thead>
               <tr class="border-b border-gray-400">
                 <th class="py-2"></th>
-                <th class="py-2">Fajr</th>
-                <th class="py-2">Dhuhr</th>
-                <th class="py-2">Asr</th>
-                <th class="py-2">Maghrib</th>
-                <th class="py-2">Isha</th>
+                <th class="py-2" scope="col">Fajr</th>
+                <th class="py-2" scope="col">Dhuhr</th>
+                <th class="py-2" scope="col">Asr</th>
+                <th class="py-2" scope="col">Maghrib</th>
+                <th class="py-2" scope="col">Isha</th>
               </tr>
             </thead>
 
@@ -82,43 +82,43 @@
                 <th>Adhan</th>
 
                 <!-- Fajr adhan time -->
-                <th class="py-2 font-normal">5:27 AM</th>
+                <td class="py-2 text-center">5:27 AM</td>
 
                 <!-- Dhuhr adhan time -->
-                <th class="py-2 font-normal">12:49 PM</th>
+                <td class="py-2 text-center">12:49 PM</td>
 
                 <!-- Asr adhan time -->
-                <th class="py-2 font-normal">4:16 PM</th>
+                <td class="py-2 text-center">4:16 PM</td>
 
                 <!-- Maghrib adhan time -->
-                <th class="py-2 font-normal">6:54 PM</th>
+                <td class="py-2 text-center">6:54 PM</td>
 
                 <!-- Isha adhan time -->
-                <th class="py-2 font-normal">8:10 PM</th>
+                <td class="py-2 text-center">8:10 PM</td>
               </tr>
 
               <tr class="border-t border-gray-400">
-                <th class="">Iqamah</th>
+                <th scope="row">Iqamah</th>
 
                 <!-- Fajr iqamah time -->
-                <th class="py-2 font-normal">5:45 AM</th>
+                <td class="py-2 text-center">5:45 AM</td>
 
                 <!-- Dhuhr iqamah time -->
-                <th class="py-2 font-normal">1:30 PM</th>
+                <td class="py-2 text-center">1:30 PM</td>
 
                 <!-- Asr iqamah time -->
-                <th class="py-2 font-normal">4:45 PM</th>
+                <td class="py-2 text-center">4:45 PM</td>
 
                 <!-- Maghrib iqamah time -->
-                <th class="py-2 font-normal">7:05 PM</th>
+                <td class="py-2 text-center">7:05 PM</td>
 
                 <!-- Isha iqamah time -->
-                <th class="py-2 font-normal">8:30 PM</th>
+                <td class="py-2 text-center">8:30 PM</td>
               </tr>
               <tr class="border-t border-gray-400">
-                <th colspan="6" class="py-2 font-normal">
+                <td colspan="6" class="py-2 text-center">
                   Jumu'ah Khutbah begins at 1:15 PM
-                </th>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -126,7 +126,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:py-8">
-        <h1 class="mb-4 text-[27px] font-bold tracking-tight">About</h1>
+        <h2 class="mb-4 text-[27px] font-bold tracking-tight">About</h2>
 
         <div class="flex-grow leading-7">
           <p>
@@ -156,7 +156,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:py-8">
-        <h1 class="mb-4 text-[27px] font-bold tracking-tight">Lessons</h1>
+        <h2 class="mb-4 text-[27px] font-bold tracking-tight">Lessons</h2>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
@@ -227,7 +227,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:py-8">
-        <h1 class="mb-4 text-[27px] font-bold tracking-tight">Contact</h1>
+        <h2 class="mb-4 text-[27px] font-bold tracking-tight">Contact</h2>
 
         <p class="leading-7">
           For any inquiries, please reach out to us at
@@ -240,7 +240,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:pt-8">
-        <h1 class="mb-4 text-[27px] font-bold tracking-tight">Socials</h1>
+        <h2 class="mb-7 text-[27px] font-bold tracking-tight">Socials</h2>
 
         <div class="flex flex-wrap gap-4">
           <a
