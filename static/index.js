@@ -1,66 +1,83 @@
-function addMinutesToTime(time) {
-  // Extract the hours and minutes from the time string
+const LATITUDE = 40.6711;
+const LONGITUDE = -73.9911;
+
+function addMinutesToTime(time, x) {
   let [hour, minute] = time.split(":").map(Number);
 
-  // Add 11 minutes
-  minute += 11;
+  minute += x;
 
-  // If minutes exceed 59, increment the hour and adjust minutes
   if (minute >= 60) {
     minute -= 60;
     hour += 1;
   }
 
-  // If the hour goes beyond 12, reset it to 1 (12-hour format)
-  if (hour > 12) {
-    hour = 1;
+  if (hour == 24) {
+    hour = 0;
   }
 
-  // Format the result to match the 12-hour format with leading zeroes
-  return `${hour}:${minute.toString().padStart(2, "0")} PM`;
+  return `${hour}:${minute.toString().padStart(2, "0")}`;
 }
 
-function convert(time24) {
-  let [hours, minutes] = time24.split(":");
+function c1(adhanTime) {
+  MARKS = [15, 30, 45, 60];
 
-  // Convert hours to number for easy manipulation
-  hours = parseInt(hours);
+  let [, minute] = adhanTime.split(":").map(Number);
 
-  const suffix = hours >= 12 ? "PM" : "AM";
-
-  // Convert to 12-hour format (handle 0 for midnight and 12 for noon)
-  if (hours === 0) {
-    hours = 12; // Midnight case (12 AM)
-  } else if (hours > 12) {
-    hours -= 12; // Convert 13-23 hours to 1-11
+  if (minute == 0) {
+    return addMinutesToTime(adhanTime, 15);
   }
 
-  // Return the formatted string
+  for (const m of MARKS) {
+    let diff = m - minute;
+    if (diff < 0) {
+      continue;
+    } else if (diff == 0) {
+      return addMinutesToTime(adhanTime, 15);
+    } else {
+      return addMinutesToTime(adhanTime, 15 + diff);
+    }
+  }
+}
+
+for (let i = 0; i < 60; i++) {
+  let j = `04:${String(i).padStart(2, "0")}`;
+  console.log(j, c1(j));
+}
+
+console.log(c1("05:00"));
+console.log(c1("05:57"));
+console.log(c1("03:42"));
+console.log(c1("07:23"));
+console.log(c1("07:00"));
+
+function convertTo12HourFormat(time24) {
+  let [hours, minutes] = time24.split(":");
+  hours = parseInt(hours);
+  const suffix = hours >= 12 ? "PM" : "AM";
+
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+  }
+
   return `${hours}:${minutes} ${suffix}`;
 }
 
 async function getData() {
   const today = new Date();
 
-  // Get the day and pad with a leading zero if necessary
   const day = String(today.getDate()).padStart(2, "0");
-
-  // Get the month (months are 0-indexed, so add 1) and pad
   const month = String(today.getMonth() + 1).padStart(2, "0");
-
-  // Get the full year
   const year = today.getFullYear();
 
-  // Combine them into DD/MM/YEAR format
   const date = `${day}-${month}-${year}`;
 
-  console.log(date);
+  // console.log(date);
 
   // const date = "06-10-2025"; // Correct date format
-  const latitude = 40.6711; // Latitude as a number, no quotes
-  const longitude = -73.9911; // Longitude as a number, no quotes
 
-  const url = `https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}`;
+  const url = `https://api.aladhan.com/v1/timings/${date}?latitude=${LATITUDE}&longitude=${LONGITUDE}`;
 
   try {
     const response = await fetch(url);
@@ -69,25 +86,37 @@ async function getData() {
     }
 
     const result = await response.json();
-    console.log(result);
-    console.log(result.data);
-    console.log(result.data.timings.Fajr);
-    console.log(result.data.timings.Dhuhr);
-    console.log(result.data.timings.Asr);
-    console.log(result.data.timings.Maghrib);
-    console.log(result.data.timings.Isha);
+    // console.log(result);
+    // console.log(result.data);
+    // console.log(result.data.timings.Fajr);
+    // console.log(result.data.timings.Dhuhr);
+    // console.log(result.data.timings.Asr);
+    // console.log(result.data.timings.Maghrib);
+    // console.log(result.data.timings.Isha);
 
-    document.getElementById("1").innerText = convert(result.data.timings.Fajr);
-    document.getElementById("2").innerText = convert(result.data.timings.Dhuhr);
-    document.getElementById("3").innerText = convert(result.data.timings.Asr);
-    document.getElementById("4").innerText = convert(
+    document.getElementById("1").innerText = convertTo12HourFormat(
+      result.data.timings.Fajr,
+    );
+    document.getElementById("2").innerText = convertTo12HourFormat(
+      result.data.timings.Dhuhr,
+    );
+    document.getElementById("3").innerText = convertTo12HourFormat(
+      result.data.timings.Asr,
+    );
+    document.getElementById("4").innerText = convertTo12HourFormat(
       result.data.timings.Maghrib,
     );
-    document.getElementById("5").innerText = convert(result.data.timings.Isha);
+    document.getElementById("5").innerText = convertTo12HourFormat(
+      result.data.timings.Isha,
+    );
+
+    document.getElementById("maghrib-iqamah-time").innerText =
+      convertTo12HourFormat(addMinutesToTime(result.data.timings.Maghrib, 11));
   } catch (error) {
     console.error(error.message);
   }
 }
+
 const d = new Date();
 
 const options = {
