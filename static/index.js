@@ -112,6 +112,15 @@ async function getData() {
 
     document.getElementById("maghrib-iqamah-time").innerText =
       convertTo12HourFormat(addMinutesToTime(result.data.timings.Maghrib, 11));
+
+    document.getElementById("isha-iqamah-time").innerText =
+      convertTo12HourFormat(c1(result.data.timings.Isha));
+
+    document.getElementById("fajr-iqamah-time").innerText =
+      convertTo12HourFormat(c1(result.data.timings.Fajr));
+
+    document.getElementById("asr-iqamah-time").innerText =
+      convertTo12HourFormat(c1(result.data.timings.Asr));
   } catch (error) {
     console.error(error.message);
   }
