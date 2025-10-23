@@ -39,17 +39,6 @@ function c1(adhanTime) {
   }
 }
 
-for (let i = 0; i < 60; i++) {
-  let j = `04:${String(i).padStart(2, "0")}`;
-  console.log(j, c1(j));
-}
-
-console.log(c1("05:00"));
-console.log(c1("05:57"));
-console.log(c1("03:42"));
-console.log(c1("07:23"));
-console.log(c1("07:00"));
-
 function convertTo12HourFormat(time24) {
   let [hours, minutes] = time24.split(":");
   hours = parseInt(hours);
@@ -126,25 +115,39 @@ async function getData() {
   }
 }
 
-const d = new Date();
+function main() {
+  const d = new Date();
 
-const options = {
-  month: "long",
-  day: "numeric",
-  year: "numeric",
-  timeZone: "America/New_York",
-};
+  const options = {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "America/New_York",
+  };
 
-document.getElementById("gregorian-date").innerText = d.toLocaleDateString(
-  "en-US",
-  options,
-);
+  document.getElementById("gregorian-date").innerText = d.toLocaleDateString(
+    "en-US",
+    options,
+  );
 
-const h = d.toLocaleDateString("en-US", {
-  ...options,
-  calendar: "islamic-umalqura",
-});
+  const h = d.toLocaleDateString("en-US", {
+    ...options,
+    calendar: "islamic-umalqura",
+  });
 
-document.getElementById("hijri-date").innerText = `(${h})`;
+  document.getElementById("hijri-date").innerText = `(${h})`;
 
-getData();
+  getData();
+  for (let i = 0; i < 60; i++) {
+    let j = `04:${String(i).padStart(2, "0")}`;
+    console.log(j, c1(j));
+  }
+
+  console.log(c1("05:00"));
+  console.log(c1("05:57"));
+  console.log(c1("03:42"));
+  console.log(c1("07:23"));
+  console.log(c1("07:00"));
+}
+
+main();
