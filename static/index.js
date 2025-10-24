@@ -1,10 +1,25 @@
 const LATITUDE = 40.6711;
 const LONGITUDE = -73.9911;
 
-function addMinutesToTime(time, x) {
-  let [hour, minute] = time.split(":").map(Number);
+function convertTo12HourFormat(time24) {
+  let [hours, minutes] = time24.split(":");
 
-  minute += x;
+  hours = parseInt(hours);
+  const suffix = hours >= 12 ? "PM" : "AM";
+
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+  }
+
+  return `${hours}:${minutes} ${suffix}`;
+}
+
+function addMinutes(time24, m) {
+  let [hour, minute] = time24.split(":").map(Number);
+
+  minute += m;
 
   if (minute >= 60) {
     minute -= 60;
@@ -18,13 +33,13 @@ function addMinutesToTime(time, x) {
   return `${hour}:${minute.toString().padStart(2, "0")}`;
 }
 
-function c1(adhanTime) {
+function calculateIqamahForFajrAsrIsha(adhanTime) {
   MARKS = [15, 30, 45, 60];
 
   let [, minute] = adhanTime.split(":").map(Number);
 
   if (minute == 0) {
-    return addMinutesToTime(adhanTime, 15);
+    return addMinutes(adhanTime, 15);
   }
 
   for (const m of MARKS) {
@@ -32,25 +47,17 @@ function c1(adhanTime) {
     if (diff < 0) {
       continue;
     } else if (diff == 0) {
-      return addMinutesToTime(adhanTime, 15);
+      return addMinutes(adhanTime, 15);
     } else {
-      return addMinutesToTime(adhanTime, 15 + diff);
+      return addMinutes(adhanTime, 15 + diff);
     }
   }
 }
 
-function convertTo12HourFormat(time24) {
-  let [hours, minutes] = time24.split(":");
-  hours = parseInt(hours);
-  const suffix = hours >= 12 ? "PM" : "AM";
-
-  if (hours === 0) {
-    hours = 12;
-  } else if (hours > 12) {
-    hours -= 12;
+function setTime(className, time24) {
+  for (const e of document.getElementsByClassName(className)) {
+    e.innerText = convertTo12HourFormat(time24);
   }
-
-  return `${hours}:${minutes} ${suffix}`;
 }
 
 async function getData() {
@@ -62,10 +69,6 @@ async function getData() {
 
   const date = `${day}-${month}-${year}`;
 
-  // console.log(date);
-
-  // const date = "06-10-2025"; // Correct date format
-
   const url = `https://api.aladhan.com/v1/timings/${date}?latitude=${LATITUDE}&longitude=${LONGITUDE}`;
 
   try {
@@ -75,41 +78,24 @@ async function getData() {
     }
 
     const result = await response.json();
-    // console.log(result);
-    // console.log(result.data);
-    // console.log(result.data.timings.Fajr);
-    // console.log(result.data.timings.Dhuhr);
-    // console.log(result.data.timings.Asr);
-    // console.log(result.data.timings.Maghrib);
-    // console.log(result.data.timings.Isha);
 
-    document.getElementById("1").innerText = convertTo12HourFormat(
-      result.data.timings.Fajr,
-    );
-    document.getElementById("2").innerText = convertTo12HourFormat(
-      result.data.timings.Dhuhr,
-    );
-    document.getElementById("3").innerText = convertTo12HourFormat(
-      result.data.timings.Asr,
-    );
-    document.getElementById("4").innerText = convertTo12HourFormat(
-      result.data.timings.Maghrib,
-    );
-    document.getElementById("5").innerText = convertTo12HourFormat(
-      result.data.timings.Isha,
-    );
+    const fajrAdhanTime = result.data.timings.Fajr;
+    const dhuhrAdhanTime = result.data.timings.Dhuhr;
+    const asrAdhanTime = result.data.timings.Asr;
+    const maghribAdhanTime = result.data.timings.Maghrib;
+    const ishaAdhanTime = result.data.timings.Isha;
 
-    document.getElementById("maghrib-iqamah-time").innerText =
-      convertTo12HourFormat(addMinutesToTime(result.data.timings.Maghrib, 11));
+    setTime("fajr-adhan-time", fajrAdhanTime);
+    setTime("dhuhr-adhan-time", dhuhrAdhanTime);
+    setTime("asr-adhan-time", asrAdhanTime);
+    setTime("maghrib-adhan-time", maghribAdhanTime);
+    setTime("isha-adhan-time", ishaAdhanTime);
 
-    document.getElementById("isha-iqamah-time").innerText =
-      convertTo12HourFormat(c1(result.data.timings.Isha));
-
-    document.getElementById("fajr-iqamah-time").innerText =
-      convertTo12HourFormat(c1(result.data.timings.Fajr));
-
-    document.getElementById("asr-iqamah-time").innerText =
-      convertTo12HourFormat(c1(result.data.timings.Asr));
+    setTime("fajr-iqamah-time", calculateIqamahForFajrAsrIsha(fajrAdhanTime));
+    setTime("dhuhr-iqamah-time", "13:15");
+    setTime("asr-iqamah-time", calculateIqamahForFajrAsrIsha(asrAdhanTime));
+    setTime("maghrib-iqamah-time", addMinutes(maghribAdhanTime, 11));
+    setTime("isha-iqamah-time", calculateIqamahForFajrAsrIsha(ishaAdhanTime));
   } catch (error) {
     console.error(error.message);
   }
@@ -138,16 +124,6 @@ function main() {
   document.getElementById("hijri-date").innerText = `(${h})`;
 
   getData();
-  for (let i = 0; i < 60; i++) {
-    let j = `04:${String(i).padStart(2, "0")}`;
-    console.log(j, c1(j));
-  }
-
-  console.log(c1("05:00"));
-  console.log(c1("05:57"));
-  console.log(c1("03:42"));
-  console.log(c1("07:23"));
-  console.log(c1("07:00"));
 }
 
 main();
