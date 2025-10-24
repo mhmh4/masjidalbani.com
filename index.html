@@ -50,18 +50,19 @@
       </div>
     </header>
 
-    <main class="relative bg-white py-12 pb-20">
-      <section class="mx-auto max-w-6xl px-5 pb-4 sm:px-10 sm:pb-8">
-        <h2 class="mb-4 text-[27px] font-bold tracking-tight">Prayer Times</h2>
+    <main class="relative bg-white">
+      <div class="pt-10"></div>
 
-        <div class="text-center text-lg sm:text-xl">
+      <section class="mx-auto max-w-6xl px-5 pb-6 sm:px-10 sm:pb-8">
+        <h2 class="text-[27px] font-bold tracking-tight">Prayer Times</h2>
+
+        <div class="mt-4 text-center text-lg sm:text-xl">
           <span id="gregorian-date"></span>
           <span id="hijri-date"></span>
         </div>
 
-        <!-- desktop -->
         <table
-          class="mt-6 hidden w-full table-auto text-lg sm:table md:text-xl"
+          class="mt-4 hidden w-full table-auto text-lg sm:table md:text-xl"
         >
           <thead>
             <tr>
@@ -77,17 +78,14 @@
           <tbody>
             <tr>
               <th scope="row">Adhan</th>
-
               <td class="fajr-adhan-time py-3 text-center">&nbsp;</td>
               <td class="dhuhr-adhan-time py-3 text-center">&nbsp;</td>
               <td class="asr-adhan-time py-3 text-center">&nbsp;</td>
               <td class="maghrib-adhan-time py-3 text-center">&nbsp;</td>
               <td class="isha-adhan-time py-3 text-center">&nbsp;</td>
             </tr>
-
             <tr>
               <th scope="row">Iqamah</th>
-
               <td class="fajr-iqamah-time py-2 text-center">&nbsp;</td>
               <td class="dhuhr-iqamah-time py-2 text-center">&nbsp;</td>
               <td class="asr-iqamah-time py-2 text-center">&nbsp;</td>
@@ -97,8 +95,7 @@
           </tbody>
         </table>
 
-        <!-- mobile -->
-        <table class="mt-3 table w-full table-auto text-base sm:hidden">
+        <table class="mt-4 table w-full table-auto text-base sm:hidden">
           <thead>
             <tr>
               <th class="py-2"></th>
@@ -106,32 +103,27 @@
               <th class="py-2" scope="col">Iqamah</th>
             </tr>
           </thead>
-
           <tbody>
             <tr>
               <th scope="row">Fajr</th>
               <td class="fajr-adhan-time py-2 text-center">&nbsp;</td>
               <td class="fajr-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
-
             <tr>
               <th scope="row">Dhuhr</th>
               <td class="dhuhr-adhan-time py-2 text-center">&nbsp;</td>
               <td class="dhuhr-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
-
             <tr>
               <th scope="row">Asr</th>
               <td class="asr-adhan-time py-2 text-center">&nbsp;</td>
               <td class="asr-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
-
             <tr>
               <th scope="row">Maghrib</th>
               <td class="maghrib-adhan-time py-2 text-center">&nbsp;</td>
               <td class="maghrib-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
-
             <tr>
               <th scope="row">Isha</th>
               <td class="isha-adhan-time py-2 text-center">&nbsp;</td>
@@ -140,54 +132,52 @@
           </tbody>
         </table>
 
-        <div
-          class="mt-3 text-center text-lg text-sky-600 underline decoration-sky-600/30 underline-offset-4 sm:mt-6 sm:text-xl"
-        >
+        <div class="mt-4 text-center text-lg sm:text-xl">
           Jumu'ah khutbah begins at 1:15 PM
         </div>
       </section>
 
-      <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:py-8">
-        <h2 class="mb-4 text-[27px] font-bold tracking-tight">About</h2>
+      <section class="mx-auto max-w-6xl px-5 pb-6 sm:px-10 sm:pb-8">
+        <h2 class="text-[27px] font-bold tracking-tight">About</h2>
 
-        <div class="flex-grow leading-7">
-          <p>
-            Masjid Al-Imam Al-Albani is a mosque located in Brooklyn, New York
-            City, dedicated to teaching and practicing Islam upon the Sunnah
-            according to the understanding of the pious predecessors (<span
-              class="italic"
-              >As-Salaf As-Salih</span
-            >).
-          </p>
-          <p class="mt-6">
-            The imam of the masjid is Shaykh Abu Dujanah, one of the early
-            students of Dammaj in Yemen. He studied under Imam Muqbil Ibn Hadi
-            Al-Wadi'i (May Allah have Mercy on him) for 7 years. The shaykh
-            gives daily lessons, focusing on beneficial knowledge and adherence
-            to the Sunnah.
-          </p>
-          <div class="mt-6 flex w-fit bg-[#fefce8] text-[#8a4d03]">
-            <div class="w-1 bg-yellow-300"></div>
-            <div class="px-3 py-1">
-              <span class="font-semibold">Please note</span>: Masjid Al-Imam
-              Al-Albani currently does not have sufficient space to accommodate
-              sisters.
-            </div>
+        <p class="mt-6 leading-7">
+          Masjid Al-Imam Al-Albani is a mosque located in Brooklyn, New York
+          City, dedicated to teaching and practicing Islam upon the Sunnah
+          according to the understanding of the pious predecessors (<span
+            class="italic"
+            >As-Salaf As-Salih</span
+          >).
+        </p>
+
+        <p class="mt-6 leading-7">
+          The imam of the masjid is Shaykh Abu Dujanah, one of the early
+          students of Dammaj in Yemen. He studied under Imam Muqbil Ibn Hadi
+          Al-Wadi'i (May Allah have Mercy on him) for 7 years. The shaykh gives
+          daily lessons, focusing on beneficial knowledge and adherence to the
+          Sunnah.
+        </p>
+
+        <div class="mt-6 flex w-fit bg-[#fefce8] text-[#8a4d03]">
+          <div class="w-1 bg-yellow-300"></div>
+          <div class="px-3 py-1 leading-7">
+            <span class="font-semibold">Please note</span>: Masjid Al-Imam
+            Al-Albani currently does not have sufficient space to accommodate
+            sisters.
           </div>
         </div>
       </section>
 
-      <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:py-8">
+      <section class="mx-auto max-w-6xl px-5 pb-6 sm:px-10 sm:pb-8">
         <h2 class="mb-4 text-[27px] font-bold tracking-tight">Lessons</h2>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <span class="font-bold">When are they?</span>
+            <span class="font-bold leading-7">When are they?</span>
             <p class="leading-7">Between Maghrib and Isha every day.</p>
           </div>
 
           <div>
-            <span class="font-bold">What's being taught?</span>
+            <span class="font-bold leading-7">What's being taught?</span>
             <p class="leading-7">
               Currently: Kitab At-Tawheed, Bulugh Al-Maram, and Al-Jaami'
               As-Saheeh.
@@ -195,7 +185,7 @@
           </div>
 
           <div>
-            <span class="font-bold">Are there translators?</span>
+            <span class="font-bold leading-7">Are there translators?</span>
             <p class="leading-7">
               English translators are always available, while translators for
               other languages are only sometimes available.
@@ -203,14 +193,18 @@
           </div>
 
           <div>
-            <span class="font-bold">Is there anything I should bring?</span>
+            <span class="font-bold leading-7"
+              >Is there anything I should bring?</span
+            >
             <p class="leading-7">
               Ideally, one should bring a notebook and something to write with.
             </p>
           </div>
 
           <div>
-            <span class="font-bold">Are the lessons broadcasted/recorded?</span>
+            <span class="font-bold leading-7"
+              >Are the lessons broadcasted/recorded?</span
+            >
             <p class="leading-7">
               Yes, live lessons can be streamed on our
               <a
@@ -241,14 +235,14 @@
                 class="text-[#1a73e8] underline"
                 target="_blank"
                 rel="noopener noreferrer"
-                >shared folder</a
+                >Google Drive folder</a
               >.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:py-8">
+      <section class="mx-auto max-w-6xl px-5 pb-6 sm:px-10 sm:pb-8">
         <h2 class="mb-4 text-[27px] font-bold tracking-tight">Contact</h2>
 
         <p class="leading-7">
@@ -261,7 +255,7 @@
         </p>
       </section>
 
-      <section class="mx-auto max-w-6xl px-5 py-4 sm:px-10 sm:pt-8">
+      <section class="mx-auto max-w-6xl px-5 pb-6 sm:px-10 sm:pb-8">
         <h2 class="mb-4 text-[27px] font-bold tracking-tight">Social</h2>
 
         <p class="mb-5 leading-7">
@@ -319,6 +313,8 @@
           </a>
         </div>
       </section>
+
+      <div class="pt-10"></div>
     </main>
 
     <footer class="border-t border-slate-300 bg-slate-100 py-10 text-center">
