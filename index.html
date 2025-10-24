@@ -2,7 +2,7 @@
 <html class="overscroll-none" lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
       content="Masjid Al-Imam Al-Albani is a mosque located in Brooklyn, New York City, dedicated to teaching and practicing Islam upon the Sunnah according to the understanding of the pious predecessors."
@@ -10,18 +10,13 @@
 
     <title>Masjid Al-Imam Al-Albani</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
-      :root {
-        background: #f1f5f9;
-      }
-    </style>
+    <link rel="stylesheet" href="./static/output.css" />
 
     <!-- Intentionally using an older version of Tailwind. -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
+  <body class="bg-[#f1f5f9]">
     <header class="sticky top-0 z-50 bg-[#0e3439] text-white">
       <div
         class="mx-auto flex max-w-7xl flex-col px-5 py-4 md:flex-row md:px-10"
@@ -83,21 +78,21 @@
             <tr>
               <th>Adhan</th>
 
-              <td id="1" class="py-3 text-center">&nbsp;</td>
-              <td id="2" class="py-3 text-center">&nbsp;</td>
-              <td id="3" class="py-3 text-center">&nbsp;</td>
-              <td id="4" class="py-3 text-center">&nbsp;</td>
-              <td id="5" class="py-3 text-center">&nbsp;</td>
+              <td class="fajr-adhan-time py-3 text-center">&nbsp;</td>
+              <td class="dhuhr-adhan-time py-3 text-center">&nbsp;</td>
+              <td class="asr-adhan-time py-3 text-center">&nbsp;</td>
+              <td class="maghrib-adhan-time py-3 text-center">&nbsp;</td>
+              <td class="isha-adhan-time py-3 text-center">&nbsp;</td>
             </tr>
 
             <tr>
               <th scope="row">Iqamah</th>
 
-              <td id="fajr-iqamah-time" class="py-2 text-center">&nbsp;</td>
-              <td id="dhuhr-iqamah-time" class="py-2 text-center">1:15 PM</td>
-              <td id="asr-iqamah-time" class="py-2 text-center">&nbsp;</td>
-              <td id="maghrib-iqamah-time" class="py-2 text-center">&nbsp;</td>
-              <td id="isha-iqamah-time" class="py-2 text-center">&nbsp;</td>
+              <td class="fajr-iqamah-time py-2 text-center">&nbsp;</td>
+              <td class="dhuhr-iqamah-time py-2 text-center">1:15 PM</td>
+              <td class="asr-iqamah-time py-2 text-center">&nbsp;</td>
+              <td class="maghrib-iqamah-time py-2 text-center">&nbsp;</td>
+              <td class="isha-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
           </tbody>
         </table>
@@ -114,33 +109,33 @@
 
           <tbody>
             <tr>
-              <th class="" scope="row">Fajr</th>
-              <td class="py-2 text-center">6:01 AM</td>
-              <td class="py-2 text-center">6:30 AM</td>
+              <th scope="row">Fajr</th>
+              <td class="fajr-adhan-time py-2 text-center">&nbsp;</td>
+              <td class="fajr-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
 
             <tr>
-              <th class="" scope="row">Dhuhr</th>
-              <td class="py-2 text-center">12:40 PM</td>
-              <td class="py-2 text-center">1:15 PM</td>
+              <th scope="row">Dhuhr</th>
+              <td class="dhuhr-adhan-time py-2 text-center">&nbsp;</td>
+              <td class="dhuhr-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
 
             <tr>
-              <th class="" scope="row">Asr</th>
-              <td class="py-2 text-center">3:39 PM</td>
-              <td class="py-2 text-center">4:00 PM</td>
+              <th scope="row">Asr</th>
+              <td class="asr-adhan-time py-2 text-center">&nbsp;</td>
+              <td class="asr-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
 
             <tr>
-              <th class="" scope="row">Maghrib</th>
-              <td class="py-2 text-center">6:04 PM</td>
-              <td class="py-2 text-center">6:15 PM</td>
+              <th scope="row">Maghrib</th>
+              <td class="maghrib-adhan-time py-2 text-center">&nbsp;</td>
+              <td class="maghrib-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
 
             <tr>
-              <th class="" scope="row">Isha</th>
-              <td class="py-2 text-center">7:19 PM</td>
-              <td class="py-2 text-center">7:45 PM</td>
+              <th scope="row">Isha</th>
+              <td class="isha-adhan-time py-2 text-center">&nbsp;</td>
+              <td class="isha-iqamah-time py-2 text-center">&nbsp;</td>
             </tr>
           </tbody>
         </table>
