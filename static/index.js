@@ -1,5 +1,9 @@
-const LATITUDE = 40.6711;
-const LONGITUDE = -73.9911;
+// Manual iqamah times (leave empty if unused)
+const FAJR_IQAMAH_MANUAL = "";
+const DHUHR_IQAMAH_MANUAL = "13:15";
+const ASR_IQAMAH_MANUAL = "";
+const MAGHRIB_IQAMAH_MANUAL = "";
+const ISHA_IQAMAH_MANUAL = "";
 
 function convertTo12HourFormat(time24) {
   let [hours, minutes] = time24.split(":");
@@ -68,8 +72,10 @@ async function getData() {
   const year = today.getFullYear();
 
   const date = `${day}-${month}-${year}`;
+  const latitude = 40.6711;
+  const longitude = -73.9911;
 
-  const url = `https://api.aladhan.com/v1/timings/${date}?latitude=${LATITUDE}&longitude=${LONGITUDE}`;
+  const url = `https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}`;
 
   try {
     const response = await fetch(url);
@@ -91,11 +97,27 @@ async function getData() {
     setTime("maghrib-adhan-time", maghribAdhanTime);
     setTime("isha-adhan-time", ishaAdhanTime);
 
-    setTime("fajr-iqamah-time", calculateIqamahForFajrAsrIsha(fajrAdhanTime));
-    setTime("dhuhr-iqamah-time", "13:15");
-    setTime("asr-iqamah-time", calculateIqamahForFajrAsrIsha(asrAdhanTime));
-    setTime("maghrib-iqamah-time", addMinutes(maghribAdhanTime, 11));
-    setTime("isha-iqamah-time", calculateIqamahForFajrAsrIsha(ishaAdhanTime));
+    setTime(
+      "fajr-iqamah-time",
+      FAJR_IQAMAH_MANUAL || calculateIqamahForFajrAsrIsha(fajrAdhanTime),
+    );
+
+    setTime("dhuhr-iqamah-time", DHUHR_IQAMAH_MANUAL);
+
+    setTime(
+      "asr-iqamah-time",
+      ASR_IQAMAH_MANUAL || calculateIqamahForFajrAsrIsha(asrAdhanTime),
+    );
+
+    setTime(
+      "maghrib-iqamah-time",
+      MAGHRIB_IQAMAH_MANUAL || addMinutes(maghribAdhanTime, 11),
+    );
+
+    setTime(
+      "isha-iqamah-time",
+      ISHA_IQAMAH_MANUAL || calculateIqamahForFajrAsrIsha(ishaAdhanTime),
+    );
   } catch (error) {
     console.error(error.message);
   }
