@@ -1,5 +1,5 @@
 // Manual iqamah times (leave empty if unused)
-const FAJR_IQAMAH_MANUAL = "";
+const FAJR_IQAMAH_MANUAL = "6:45";
 const DHUHR_IQAMAH_MANUAL = "13:15";
 const ASR_IQAMAH_MANUAL = "";
 const MAGHRIB_IQAMAH_MANUAL = "";
