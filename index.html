@@ -16,13 +16,11 @@
   <body class="bg-[#f1f5f9]">
     <header class="sticky top-0 z-50 bg-[#0e3439] text-white">
       <div
-        class="mx-auto flex max-w-7xl flex-col px-5 py-4 md:flex-row md:px-10"
+        class="mx-auto flex max-w-7xl flex-row items-center px-5 py-4 md:px-10"
       >
-        <div
-          class="flex flex-grow items-center justify-center md:justify-normal"
-        >
+        <div class="flex flex-grow items-center">
           <img
-            class="h-full w-[85px] border-r border-[#b1a167] text-center md:w-[100px] lg:w-[130px] ltr:pr-4"
+            class="h-full w-[85px] border-[#b1a167] text-center md:w-[100px] lg:w-[130px] ltr:border-r ltr:pr-4 rtl:border-l rtl:pl-4"
             src="./static/masjid-logo.png"
             alt="Masjid Al-Imam Al-Albani logo"
           />
@@ -33,9 +31,13 @@
         </div>
 
         <div class="text-lg">
-          <!-- <a class="border border-white px-3 py-1 font-mono" href="./ar.html">
-            ar
+          <!-- <a
+            class="border border-white px-3 py-1 font-mono"
+            href="./index.html"
+          >
+            en
           </a> -->
+          &nbsp;
         </div>
       </div>
     </header>
@@ -236,14 +238,21 @@
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
         <h2 class="mb-4 text-[27px] font-bold">Contact</h2>
 
-        <p class="leading-7">
-          For any inquiries, please reach out to us at
-          <a
-            class="text-[#1a73e8] underline"
-            href="mailto:imamalalbanimasjid@gmail.com"
-            >imamalalbanimasjid@gmail.com</a
-          >.
-        </p>
+        <div class="grid grid-cols-1 gap-8 gap-y-2 sm:grid-cols-2">
+          <div class="leading-7">
+            <span class="font-bold">Address</span>: 463 3rd Ave, Brooklyn, NY
+            11215
+          </div>
+
+          <div class="leading-7">
+            <span class="font-bold">Email</span>:
+            <a
+              class="text-[#1a73e8] underline"
+              href="mailto:imamalalbanimasjid@gmail.com"
+              >imamalalbanimasjid@gmail.com</a
+            >
+          </div>
+        </div>
       </section>
 
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
