@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="overscroll-none" lang="en-US">
+<html class="overscroll-none" lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +8,7 @@
       content="Masjid Al-Imam Al-Albani is a mosque located in Brooklyn, New York City, dedicated to teaching and practicing Islam upon the Sunnah according to the understanding of the pious predecessors."
     />
     <title>Masjid Al-Imam Al-Albani</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
-    </style>
+    <style></style>
     <link rel="stylesheet" href="./static/output.css" />
     <link rel="shortcut icon" href="./static/favicon.png" />
   </head>
@@ -20,19 +18,24 @@
       <div
         class="mx-auto flex max-w-7xl flex-col px-5 py-4 md:flex-row md:px-10"
       >
-        <div class="flex flex-grow justify-center md:justify-normal">
+        <div
+          class="flex flex-grow items-center justify-center md:justify-normal"
+        >
           <img
             class="h-full w-[85px] border-r border-[#b1a167] pr-4 text-center md:w-[100px] lg:w-[130px]"
             src="./static/masjid-logo.png"
             alt="Masjid Al-Imam Al-Albani logo"
           />
-          <h1 class="my-auto pl-4 font-['Roboto_Serif'] text-lg md:text-[21px]">
-            Masjid Al-Imam Al-Albani
+          <h1 class="text-lg md:text-[21.5px] ltr:pl-4 rtl:pr-4">
+            Masjid <br class="min-[430px]:hidden" />
+            Al-Imam Al-Albani
           </h1>
         </div>
 
-        <div class="mx-auto mt-3 flex items-center text-base md:m-0 md:text-lg">
-          463 3rd Ave, Brooklyn, NY 11215
+        <div class="text-lg">
+          <!-- <a class="border border-white px-3 py-1 font-mono" href="./ar.html">
+            ar
+          </a> -->
         </div>
       </div>
     </header>
@@ -40,8 +43,12 @@
     <main class="relative bg-white">
       <div class="pt-8 sm:pt-10"></div>
 
+      <!-- <div class="mb-8 text-center font-['Aref_Ruqaa'] text-2xl">
+        بسم الله الرحمن الرحيم
+      </div> -->
+
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
-        <h2 class="text-[27px] font-bold tracking-tight">Prayer Times</h2>
+        <h2 class="text-[27px] font-bold">Prayer Times</h2>
 
         <div class="mt-5 text-center text-lg sm:text-xl">
           <span id="gregorian-date"></span>
@@ -124,15 +131,12 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
-        <h2 class="text-[27px] font-bold tracking-tight">About</h2>
+        <h2 class="text-[27px] font-bold">About</h2>
 
         <p class="mt-6 leading-7">
           Masjid Al-Imam Al-Albani is a mosque located in Brooklyn, New York
           City, dedicated to teaching and practicing Islam upon the Sunnah
-          according to the understanding of the pious predecessors (<span
-            class="italic"
-            >As-Salaf As-Salih</span
-          >).
+          according to the understanding of the pious predecessors.
         </p>
 
         <p class="mt-6 leading-7">
@@ -154,11 +158,11 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
-        <h2 class="mb-4 text-[27px] font-bold tracking-tight">Lessons</h2>
+        <h2 class="mb-4 text-[27px] font-bold">Lessons</h2>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <span class="font-bold leading-7">When are they?</span>
+            <span class="font-bold leading-7">When are the lessons?</span>
             <p class="leading-7">Between Maghrib and Isha every day.</p>
           </div>
 
@@ -183,7 +187,8 @@
               >Is there anything I should bring?</span
             >
             <p class="leading-7">
-              Ideally, one should bring a notebook and something to write with.
+              From the manners of a student of knowledge is to come with a
+              notebook and a pen.
             </p>
           </div>
 
@@ -229,7 +234,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
-        <h2 class="mb-4 text-[27px] font-bold tracking-tight">Contact</h2>
+        <h2 class="mb-4 text-[27px] font-bold">Contact</h2>
 
         <p class="leading-7">
           For any inquiries, please reach out to us at
@@ -242,7 +247,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-5 pb-8 sm:px-10 sm:pb-12">
-        <h2 class="mb-4 text-[27px] font-bold tracking-tight">Social</h2>
+        <h2 class="mb-4 text-[27px] font-bold">Social</h2>
 
         <p class="mb-6 leading-7">
           Our social media profiles mainly share recorded lessons and live class
@@ -263,7 +268,9 @@
                 alt="YouTube logo"
               />
             </div>
-            <div class="px-2 pr-0 text-center text-lg">YouTube</div>
+            <div class="px-2 text-center text-lg ltr:pr-0 rtl:pl-0">
+              YouTube
+            </div>
           </a>
 
           <a
@@ -279,7 +286,9 @@
                 alt="Telegram logo"
               />
             </div>
-            <div class="px-2 pr-0 text-center text-lg">Telegram</div>
+            <div class="px-2 text-center text-lg ltr:pr-0 rtl:pl-0">
+              Telegram
+            </div>
           </a>
 
           <a
@@ -295,7 +304,9 @@
                 alt="WhatsApp logo"
               />
             </div>
-            <div class="px-2 pr-0 text-center text-lg">WhatsApp</div>
+            <div class="px-2 text-center text-lg ltr:pr-0 rtl:pl-0">
+              WhatsApp
+            </div>
           </a>
 
           <a
@@ -377,7 +388,7 @@
                 ></path>
               </svg>
             </div>
-            <div class="px-2 pr-0 text-center text-lg">Mixlr</div>
+            <div class="px-2 text-center text-lg ltr:pr-0 rtl:pl-0">Mixlr</div>
           </a>
         </div>
       </section>
@@ -386,7 +397,7 @@
     </main>
 
     <footer class="border-t border-slate-300 bg-slate-100 py-10 text-center">
-      © 2025 Masjid Al-Imam Al-Albani
+      2025 © Masjid Al-Imam Al-Albani
     </footer>
   </body>
 
